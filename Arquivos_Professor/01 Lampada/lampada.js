@@ -2,12 +2,12 @@ const turnOn = document.getElementById ( 'turnOn' );
 const turnOff = document.getElementById ( 'turnOff' );
 const lamp = document.getElementById ( 'lamp' )
 
-function isLampBroken () {
+function islampBroken () {
     return lamp.src.indexOf ( 'quebrada' ) > -1    
 }
 
 function lampOn () {
-    if ( !isLampBroken () ) {
+    if ( !islampBroken () ) {
         lamp.src = './img/ligada.jpg';
     } 
 }
