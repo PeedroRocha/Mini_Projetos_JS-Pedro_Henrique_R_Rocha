@@ -13,7 +13,7 @@ function lampOn () {
 }
 function lampOff () {
     if ( !islampBroken () ) {
-        lamp.src = './img/desligada.jpg'; /* paramos aqui, 19 min do vídeo, na inspeção do google apontou o erro aqui nesta linha */
+        lamp.src = './img/desligada.jpg'; 
     }
 }
 function lampBroken () {
