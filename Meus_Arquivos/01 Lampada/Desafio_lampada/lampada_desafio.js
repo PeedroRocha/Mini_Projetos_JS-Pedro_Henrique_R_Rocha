@@ -1,5 +1,5 @@
-const turnOn = document.getElementById ( 'turnOn' );
-const turnOff = document.getElementById ( 'turnOff' );
+const turnOn = document.getElementById ( 'turnOn_Off' );
+const turnOff = document.getElementById ( 'turnOn_Off' );
 const repair = document.getElementById ( 'repair' );
 const lamp = document.getElementById ( 'lamp' ) 
 
@@ -28,7 +28,7 @@ function lampRepair () {
 }
 
 turnOn.addEventListener ( 'click', lampOn );
-turnOff.addEventListener ( 'click', lampOff );
+turnOff.addEventListener ( 'dblclick', lampOff );
 lamp.addEventListener ( 'mouseover', lampOn );
 lamp.addEventListener ( 'mouseleave', lampOff );
 lamp.addEventListener ( 'dblclick', lampBroken );
