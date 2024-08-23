@@ -3,8 +3,9 @@ const buttons = document.getElementById( 'buttons' );
 let colorIndex = 0;
 let intervalId = null;
 
-const traficLight = ( event ) => {
+const trafficLight = ( event ) => {
     stopAutomatic();
+    turnOn[event.target.id]();
 }
 
 const nextIndex = () => {
@@ -26,7 +27,7 @@ const stopAutomatic = () => {
     clearInterval ( intervalId );
 }
 
-const TurnOn = {
+const turnOn = {
     'red':       () => img.src = './img/vermelho.png',
     'yellow':    () => img.src = './img/amarelo.png',
     'green':     () => img.src = './img/verde.png',
