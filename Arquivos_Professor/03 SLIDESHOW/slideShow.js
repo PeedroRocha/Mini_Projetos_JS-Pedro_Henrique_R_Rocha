@@ -9,7 +9,7 @@ const images = [
     { 'id': '6', 'url':'./img/ippo.png' },
 ]
 
-const container = document.querySelector('#container-items');
+const containerItems = document.querySelector('#container-items');
 
 const loadImages = ( images, container ) => {
     images.forEach ( image => {
@@ -23,4 +23,12 @@ const loadImages = ( images, container ) => {
 
 
 
- //loadImages( images, container );
+ loadImages( images, containerItems );
+
+ let items = document.querySelectorAll('.item');
+
+ const previous = () => {
+     container
+}
+
+// Paramos em 28min

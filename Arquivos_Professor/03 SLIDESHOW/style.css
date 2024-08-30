@@ -19,18 +19,23 @@
     display: flex;
     width: 50vw;
     height: 50vh;
-    background-color: red;
     border-radius: 10px;
+    transition: all 1s;
 }
 
 .item {
     width: 50vw;
-    height: 50vh;
+    height: 50vh;  
+}
+
+.item:first-child{
+    margin-left: -100%;
 }
 
 .item img {
     width: 50vw;
     height: 50vh;
+    border-radius: 10px;
 }
 
 .action-button {
@@ -39,7 +44,15 @@
     justify-content: center;
     align-items: center;
     width: 50px;
+    color: #00000000;
+    user-select: none;
     z-index: 1;
 }
 
-/* Paramos em 19 minutos.*/
+.action-button:hover{
+    color: #ffffff;
+    background-color: #00000055;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1s;
+}
