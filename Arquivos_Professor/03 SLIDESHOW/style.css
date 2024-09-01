@@ -20,12 +20,13 @@
     width: 50vw;
     height: 50vh;
     border-radius: 10px;
-    transition: all 1s;
+    overflow: hidden;
 }
 
 .item {
     width: 50vw;
-    height: 50vh;  
+    height: 50vh;
+    transition: all 1s;  
 }
 
 .item:first-child{

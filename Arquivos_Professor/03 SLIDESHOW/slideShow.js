@@ -21,14 +21,20 @@ const loadImages = ( images, container ) => {
     })
 }
 
-
-
  loadImages( images, containerItems );
 
  let items = document.querySelectorAll('.item');
 
  const previous = () => {
-     container
+     containerItems.appendChild(items[0]);
+     items = document.querySelectorAll('.item');
 }
 
-// Paramos em 28min
+const next = () => {
+    const lastItem = items[items.length - 1];
+    containerItems.insertBefore( lastItem, items[0] );
+    items = document.querySelectorAll('.item');    
+}
+
+document.querySelector('#previous').addEventListener('click', previous);
+document.querySelector('#next').addEventListener('click', next);
