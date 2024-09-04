@@ -21,11 +21,27 @@ main{
     color: #ffcc00;
     margin: 15vh auto;
     font-size: calc(5vw + 20px);
+    text-shadow: 0 0 10px black, 
+                 0 0 10px black,
+                 0 0 10px black; 
 }
 
 .container{
-    background-color: white;
     width: 90vw;
     height: 100px;
-    margin: 0 auto; /* paramos em 10 minutos */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+}
+
+.key{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-size: calc(3vw + 20px); /*Paramos em 17:00 minutos */
 }
