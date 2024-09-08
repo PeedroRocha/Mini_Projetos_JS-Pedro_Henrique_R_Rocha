@@ -1,7 +1,7 @@
 'use strict';
 
 const sons = {
-    'A': 'bomm.wav',
+    'A': 'boom.wav',
     'S': 'clap.wav',
     'D': 'hihat.wav',
     'F': 'kick.wav',
@@ -22,9 +22,19 @@ const criarDiv = (texto) => {
 
 const exibir = (sons) => Object.keys(sons).forEach(criarDiv);
 
+const tocarSom = (letra) => {
+    const audio = new Audio(`./sounds/${sons[letra]}`);
+    audio.play();
+}
+const ativarDiv = (evento) => {
+    const letra = evento.target.id;
+    const letraPermitida = sons.hasOwnProperty(letra);
+    if (letraPermitida) {
+        tocarSom(letra);
+    }
+    
+}
+ /* Paramos em 44 minutos */
 exibir(sons);
-
-
-
 document.getElementById('container')
-        .addEventListener('click', ativarDiv); /* Paramos em 34 min*/
+        .addEventListener('click', ativarDiv); 
