@@ -77,4 +77,45 @@ const inverterSinal = () => {
 };
 document.getElementById('inverter').addEventListener('click', inverterSinal);
 
-// paramos aqui
+const existeDecimal = () => display.textContent.indexOf(',') !== -1;
+const existeValor = () => display.textContent.length > 0;
+const inserirDecimal = () => {
+    if (!existeDecimal()) {
+        if (novoNumero) {
+            atualizarDisplay('0,');
+        } else {
+            atualizarDisplay(',');
+        }
+    }
+};
+document.getElementById('decimal').addEventListener('click', inserirDecimal);
+
+const mapaTeclado = {
+    0: 'tecla0',
+    1: 'tecla1',
+    2: 'tecla2',
+    3: 'tecla3',
+    4: 'tecla4',
+    5: 'tecla5',
+    6: 'tecla6',
+    7: 'tecla7',
+    8: 'tecla8',
+    9: 'tecla9',
+    '/': 'operadorDividir',
+    '*': 'operadorMultiplicar',
+    '-': 'operadorSubtrair',
+    '+': 'operadorAdicionar',
+    '=': 'igual',
+    Enter: 'igual',
+    Backspace: 'backSpace',
+    c: 'limparDisplay',
+    Escape: 'limparCalculo',
+    ',': 'decimal',
+};
+
+const mapearTeclado = (evento) => {
+    const tecla = evento.key;
+    const teclaPermitida = () => Object.keys(mapaTeclado).indexOf(tecla) !== -1;
+    if (teclaPermitida()) document.getElementById(mapaTeclado[tecla]).click();
+};
+document.addEventListener('keydown', mapearTeclado);
